@@ -1,8 +1,8 @@
 # Pong
 Building Pong from the Godot Tutorial
 
-## Todo
+## ToDo
 
-1. Need to make a splash screen - [ ]
-2. Implement a scoring system - [ ]
-3. Got it working! - [x]
+- [ ] Need to make a splash screen 
+- [ ] Implement a scoring system 
+- [x] Got it working! 
