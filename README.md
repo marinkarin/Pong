@@ -4,5 +4,5 @@ Building Pong from the [Godot Tutorial](http://docs.godotengine.org/en/stable/le
 ## ToDo
 
 - [ ] Need to make a splash screen 
-- [ ] Implement a scoring system 
+- [x] Implement a scoring system 
 - [x] Got it working! 
