@@ -9,6 +9,10 @@ const INITIAL_BALL_SPEED = 80
 var ball_speed = INITIAL_BALL_SPEED
 # Constant for pads speed
 const PAD_SPEED = 150
+
+var leftScore = 0
+var rightScore = 0
+
 func _ready():
 	screen_size = get_viewport_rect().size
 	pad_size = get_node("Left").get_texture().get_size()
@@ -17,6 +21,7 @@ func _process(delta):
 	var ball_pos = get_node("Ball").get_pos()
 	var left_rect = Rect2( get_node("Left").get_pos() - pad_size*0.5, pad_size ) # collison for the pads
 	var right_rect = Rect2( get_node("Right").get_pos() - pad_size*0.5, pad_size )
+	
 	# Integrate new ball position
 	ball_pos += direction * ball_speed * delta
 	# Does it hit the top or bottom of the screen?
@@ -31,9 +36,15 @@ func _process(delta):
 	# if the ball goes out of bounds
 		# Check gameover
 	if (ball_pos.x < 0 or ball_pos.x > screen_size.x):
-	    ball_pos = screen_size*0.5
-	    ball_speed = INITIAL_BALL_SPEED
-	    direction = Vector2(-1, 0)
+		if(ball_pos.x < 0):
+			rightScore += 1
+			get_node("rightScore").set_text(str(rightScore))
+		if(ball_pos.x > screen_size.x):
+			leftScore += 1
+			get_node("leftScore").set_text(str(leftScore))
+		ball_pos = screen_size*0.5
+		ball_speed = INITIAL_BALL_SPEED
+		direction = Vector2(-1, 0)
 	get_node("Ball").set_pos(ball_pos)
 	
 	# Move left pad
