@@ -17,6 +17,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	pad_size = get_node("Left").get_texture().get_size()
 	set_process(true)
+	
 func _process(delta):
 	var ball_pos = get_node("Ball").get_pos()
 	var left_rect = Rect2( get_node("Left").get_pos() - pad_size*0.5, pad_size ) # collison for the pads
@@ -45,6 +46,7 @@ func _process(delta):
 		ball_pos = screen_size*0.5
 		ball_speed = INITIAL_BALL_SPEED
 		direction = Vector2(-1, 0)
+		
 	get_node("Ball").set_pos(ball_pos)
 	
 	# Move left pad
