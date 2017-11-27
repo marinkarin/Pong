@@ -6,7 +6,7 @@ As a bonus, I implemented a crappy looking title screen and a very simplistic sc
 
 ## ToDo
 
-- [x] Need to make a splash screen 
-- [x] Implement a scoring system 
-- [x] Got it working! 
+- [x] Make a splash screen
+- [x] Create a scoring system 
+- [x] It works! 
 - [ ] Sound effects? 
