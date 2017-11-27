@@ -9,3 +9,4 @@ As a bonus, I implemented a crappy looking title screen and a very simplistic sc
 - [x] Need to make a splash screen 
 - [x] Implement a scoring system 
 - [x] Got it working! 
+- [ ] Sound effects? 
